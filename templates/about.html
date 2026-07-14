@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Demo - About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f7fb;
+            color: #333;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background: #4f46e5;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #4f46e5;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 5px solid #06b6d4;
+            background: #eef7ff;
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: #4f46e5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #4338ca;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">Flask Demo</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1>About This Project</h1>
+
+    <p>
+        This page demonstrates how multiple routes work in Flask.
+        Each route renders a different HTML template.
+    </p>
+
+    <p>
+        As your application grows, you can move the CSS into a
+        <code>static/style.css</code> file and reuse it across all pages.
+    </p>
+
+    <div class="card">
+        <strong>Flask Tip:</strong><br><br>
+        Use <code>{{ url_for('home') }}</code> and
+        <code>{{ url_for('about') }}</code> instead of hardcoding URLs.
+    </div>
+
+    <a href="/" class="btn">← Back to Home</a>
+</div>
+
+</body>
+</html>
